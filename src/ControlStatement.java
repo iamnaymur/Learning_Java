@@ -11,7 +11,6 @@ public class ControlStatement {
     }
 
     public static void checkVoter(int age) {
-
         if (age >= 18) {
             System.out.print("Valid voter.");
         } else {
