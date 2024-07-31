@@ -31,8 +31,6 @@ public class Fibonacci {
         System.out.print("Which Fibonacci number you want to see: ");
         num = new Scanner(System.in).nextInt();
 
-//        System.out.print(first + " " + second);
-
         for (int i = 0; i < num; i++) {
             if (i <= 1) {
                 fibo = i;
