@@ -1,5 +1,6 @@
 package LoopProgram;
 
+import java.sql.ParameterMetaData;
 import java.util.Scanner;
 
 public class NumberPrograms {
@@ -8,7 +9,8 @@ public class NumberPrograms {
     public static void main(String[] args) {
 //        sumOfDigits();
 //        reverseNumber();
-        findPalindrome();
+//        findPalindrome();
+        ArmstrongNumber();
     }
 
     //!    Sum of digits
@@ -57,6 +59,31 @@ public class NumberPrograms {
                 System.out.println(i);
             }
         }
+    }
+
+    public static void ArmstrongNumber() {
+        int sum, remainder, temp, start, end, count = 0;
+
+        System.out.print("Starting number :");
+        start = input.nextInt();
+        System.out.print("Last number :");
+        end = input.nextInt();
+
+
+        for (int i = start; i <= end; i++) {
+            sum = 0;
+            for (temp = i; temp != 0; temp = temp / 10) {
+                remainder = temp % 10;
+                sum = remainder * remainder * remainder + sum;
+            }
+            if (sum == i) {
+                count++;
+                System.out.println(i);
+            }
+        }
+        System.out.println("Total armstrong number is " + count);
+
+
     }
 
 }
