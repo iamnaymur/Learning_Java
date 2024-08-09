@@ -10,7 +10,8 @@ public class NumberPrograms {
 //        sumOfDigits();
 //        reverseNumber();
 //        findPalindrome();
-        ArmstrongNumber();
+//        ArmstrongNumber();
+        validateUser();
     }
 
     //!    Sum of digits
@@ -84,6 +85,25 @@ public class NumberPrograms {
         System.out.println("Total armstrong number is " + count);
 
 
+    }
+
+    public static void validateUser() {
+        String userName, password;
+
+        while (true) {
+            System.out.print("Enter your username: ");
+            userName = input.nextLine();
+
+            System.out.print("Enter your password: ");
+            password = input.nextLine();
+
+            if (userName.equals("Naymur Rahman") && password.equals("kirehala")) {
+                System.out.println("Welcome to the system.");
+                break;
+            } else {
+                System.out.println("Invalid username or password.");
+            }
+        }
     }
 
 }
