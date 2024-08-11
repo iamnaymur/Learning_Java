@@ -1,6 +1,4 @@
-package PatterPrograms;
-
-import java.util.Scanner;
+package patterPrograms;
 
 public class PatterDemo1 {
 

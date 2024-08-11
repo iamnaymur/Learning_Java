@@ -1,6 +1,5 @@
-package LoopProgram;
+package loopProgram;
 
-import java.sql.ParameterMetaData;
 import java.util.Scanner;
 
 public class NumberPrograms {
