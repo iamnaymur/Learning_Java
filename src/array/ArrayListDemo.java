@@ -2,10 +2,11 @@ package array;
 
 import java.util.ArrayList;
 
-public class ArrayListDemo {
+class ArrayListDemo {
     public static void main(String[] args) {
 //        arrayListDemo();
-        arrayListMethods();
+//        arrayListMethods();
+        arrayListMethods2();
     }
 
     public static void arrayListDemo() {
@@ -44,5 +45,32 @@ public class ArrayListDemo {
 
         int value = num.get(0);
         System.out.println(value);
+
+
+    }
+
+    public static void arrayListMethods2() {
+        ArrayList<Integer> num1 = new ArrayList<>();
+        ArrayList<Integer> num2 = new ArrayList<>();
+        ArrayList<Integer> num3 = new ArrayList<>();
+
+        num1.add(1);
+        num1.add(2);
+        num1.add(3);
+        num2.add(1);
+        num2.add(2);
+        num2.add(3);
+        System.out.println(num2);
+
+        num3.addAll(num1);
+        /*
+        ! This is the alternative way of addAll
+        ArrayList<Integer> num3 = new ArrayList<>(num1);
+        */
+        System.out.println(num3);
+
+        boolean equals = num1.equals(num2);
+        System.out.println(equals);
+
     }
 }
