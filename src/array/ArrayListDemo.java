@@ -1,12 +1,15 @@
 package array;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 class ArrayListDemo {
     public static void main(String[] args) {
 //        arrayListDemo();
 //        arrayListMethods();
-        arrayListMethods2();
+//        arrayListMethods2();
+        arrayListDemo4();
     }
 
     public static void arrayListDemo() {
@@ -71,6 +74,23 @@ class ArrayListDemo {
 
         boolean equals = num1.equals(num2);
         System.out.println(equals);
+
+    }
+
+    public static void arrayListDemo4() {
+        ArrayList<Integer> number = new ArrayList<>();
+        number.add(1);
+        number.add(30);
+        number.add(12);
+        number.add(-45);
+
+
+        System.out.println(number);
+
+        Collections.sort(number);
+        System.out.println("Ascending order :" + number);
+        Collections.sort(number, Collections.reverseOrder());
+        System.out.println("Descending order :" + number);
 
     }
 }
