@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class StringBufferDemo {
     public static void main(String[] args) {
 //        stringBufferDemo1();
-        palindrome();
+        stringBuilderDemo();
+//        palindrome();
     }
 
     public static void stringBufferDemo1() {
@@ -32,5 +33,16 @@ public class StringBufferDemo {
         if (checkPalindrome.toString().equals(userString)) {
             System.out.println("Palindrome");
         }
+    }
+
+    public static void stringBuilderDemo() {
+        StringBuilder newLine = new StringBuilder();
+
+        newLine.append("Tushar");
+        newLine.append("Hello World");
+        System.out.println(newLine);
+
+        newLine.delete(2, 5);
+        System.out.println(newLine);
     }
 }
