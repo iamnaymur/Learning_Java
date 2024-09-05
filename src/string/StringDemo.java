@@ -2,7 +2,8 @@ package string;
 
 public class StringDemo {
     public static void main(String[] args) {
-        stringDemo1();
+//        stringDemo1();
+        convertToString();
     }
 
     public static void stringDemo1() {
@@ -28,5 +29,20 @@ public class StringDemo {
 
         boolean b = s1.isEmpty();
         System.out.println(b);
+    }
+
+    public static void convertToString() {
+        // anisul islam video - 94
+        Double i = 100.233;
+        String s = Double.toString(i);
+        System.out.println(s);
+
+        String s1 = "21123";
+        Integer num = Integer.parseInt(s1);
+        System.out.println(num);
+
+        String s2 = "213123"; // Same as the parse function, the valueOf can also work fine.
+        int num2 = Integer.valueOf(s2);
+        System.out.println(num2);
     }
 }
