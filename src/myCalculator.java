@@ -1,5 +1,3 @@
-
-
 public class myCalculator {
 
     public double a, b;
