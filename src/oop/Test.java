@@ -26,12 +26,17 @@ public class Test {
         //! To use static variable creating a object is not required. Static member is related to class, not object.
 //        System.out.println(StaticVariable.amarName);
 
-        StaticVariable s1 = new StaticVariable();
-        s1.totalCount();
-        StaticVariable s2 = new StaticVariable();
-        s2.totalCount();
-        StaticVariable s3 = new StaticVariable();
-        s3.totalCount();
+//        StaticVariable s1 = new StaticVariable();
+//        s1.totalCount();
+//        StaticVariable s2 = new StaticVariable();
+//        s2.totalCount();
+//        StaticVariable s3 = new StaticVariable();
+//        s3.totalCount();
 
+
+        StaticMethod.displayTwo(); //! Here I can access the method without creating an object cause I used the static method.
+
+        StaticMethod staticMethod = new StaticMethod();
+        staticMethod.displayOne(); //! This is because I didnt use static with the displayOne.
     }
 }
