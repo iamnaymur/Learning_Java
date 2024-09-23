@@ -15,8 +15,17 @@
   knows what kind of Object it should expect, so it can enforce type safety and prevent you from accidentally adding
   the
   wrong type of object.
+
 ```java
 ArrayList<String> arr = new ArrayList<>(); // arr can only hold String objects
 
 ArrayList arr = new ArrayList(); //In this statement, no type is specified within the angle brackets (<>). This means the ArrayList can hold objects of any type (it becomes a raw type), but this practice is discouraged because it can lead to issues with type safety.
 ```
+
+### Stack and Heap
+
+- **Heap Memory**: Stores objects and instance variables. Managed by the garbage collector. Larger and globally
+  accessible. Slower than stack memory.
+
+- **Stack Memory**: Stores method calls, local variables, and references to heap objects. Automatically managed (LIFO).
+  Smaller, faster, and method-specific.

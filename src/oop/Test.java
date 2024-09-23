@@ -33,10 +33,22 @@ public class Test {
 //        StaticVariable s3 = new StaticVariable();
 //        s3.totalCount();
 
+//
+//        StaticMethod.displayTwo(); //! Here I can access the method without creating an object cause I used the static method.
+//
+//        StaticMethod staticMethod = new StaticMethod();
+//        staticMethod.displayOne(); //! This is because I didnt use static with the displayOne.
 
-        StaticMethod.displayTwo(); //! Here I can access the method without creating an object cause I used the static method.
 
-        StaticMethod staticMethod = new StaticMethod();
-        staticMethod.displayOne(); //! This is because I didnt use static with the displayOne.
+        // !! Call by reference
+        CallByRef r1 = new CallByRef();
+        //Before passing
+        r1.name = "Rahman";
+        System.out.println(r1.name);
+
+        r1.change(r1);
+        //After passing object and the value by reference
+        System.out.println(r1.name);
+
     }
 }
