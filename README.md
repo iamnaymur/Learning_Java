@@ -29,3 +29,35 @@ ArrayList arr = new ArrayList(); //In this statement, no type is specified withi
 
 - **Stack Memory**: Stores method calls, local variables, and references to heap objects. Automatically managed (LIFO).
   Smaller, faster, and method-specific.
+
+### Varargs
+
+**VarArgs in JAVA is the same as the REST PARAMETERS in Javascript.**
+
+Varargs in Java allows you to pass a variable number of arguments to a method. It is defined
+using `dataType... parameterName`, and the arguments are treated as an array within the method. This enables flexibility
+in method calls without overloading.
+
+### Example:
+
+```java
+static void showValues(int... numbers) {
+    // Process numbers as an array
+}
+```
+
+**Key Point**: Varargs must be of the same type and can simplify method calls.
+
+### Iteration VS Recursion
+### Iteration:
+- **Definition**: A process where a loop repeatedly executes a block of code until a condition is met.
+- **Memory**: Uses less memory since it doesn't create new function calls.
+- **Efficiency**: Generally faster and more efficient for simple tasks.
+- **Example**: Using a `for` loop to calculate a sum.
+
+### Recursion:
+- **Definition**: A process where a function calls itself to solve smaller subproblems.
+- **Memory**: Uses more memory due to multiple function calls stacked on top of each other.
+- **Complexity**: Can be cleaner and easier to understand for complex problems (like tree traversals).
+- **Example**: Calculating a factorial by calling the function repeatedly.
+

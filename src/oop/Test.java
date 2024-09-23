@@ -40,7 +40,8 @@ public class Test {
 //        staticMethod.displayOne(); //! This is because I didnt use static with the displayOne.
 
 
-        // !! Call by reference
+   /*
+   ! Call by reference
         CallByRef r1 = new CallByRef();
         //Before passing
         r1.name = "Rahman";
@@ -49,6 +50,12 @@ public class Test {
         r1.change(r1);
         //After passing object and the value by reference
         System.out.println(r1.name);
+   */
 
+
+        //!  VarArgs is the same as REST PARAMETER in javascript.
+
+        VarArgs demo = new VarArgs();
+        demo.add(1, 1, 1, 1, 1);
     }
 }
