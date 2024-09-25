@@ -71,7 +71,7 @@ static void showValues(int... numbers) {
 3. **Polymorphism**: Methods behave differently based on the context.
 4. **Abstraction**: Hide complex details, only show important parts.
 
-## 1. **Encapsulation**
+### 1. **Encapsulation**
 
 Encapsulation is about keeping the details (variables) hidden and only allowing access to them through methods (getters
 and setters). It helps protect the data from being changed directly.
@@ -101,11 +101,19 @@ public class Main {
     }
 }
 ```
+
 ![img_1.png](img_1.png)
+
 ### 2. **Inheritance**
 
 Inheritance allows a class to inherit properties and methods from another class. The class that inherits is called a
 child class, and the class being inherited from is the parent class.
+
+There are **4 types of inheritance**.
+
+1. Single inheritance
+2. Multilevel inheritance
+3. Hierarchical inheritance
 
 **Example:**
 
@@ -135,8 +143,8 @@ public class Main {
 ### 3. **Polymorphism**
 
 Polymorphism means "many forms." In Java, it allows methods to have different implementations depending on the object
-type or how they're called. There are two types: method overloading (same method name, different parameters) and method
-overriding (child class redefines a method from the parent class).
+type or how they're called. There are two types: **_method overloading_** (same method name, different parameters) and **_method
+overriding_** (child class redefines a method from the parent class).
 
 **Example of Method Overloading:**
 
