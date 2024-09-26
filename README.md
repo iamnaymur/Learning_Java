@@ -297,3 +297,53 @@ public class Main {
 ```
 
 ## THIS (Keyword)
+
+1. **Refer to instance variables**
+2. **Call other methods**
+3. **Call another constructor**
+
+**Examples:**
+
+1. **Referring to instance variables**:
+   ```java
+   class Example {
+       int value;
+
+       Example(int value) {
+           this.value = value; // 'this' refers to the instance variable
+       }
+
+       void display() {
+           System.out.println("Value: " + this.value); // 'this' refers to the current instance
+       }
+   }
+   ```
+
+2. **Calling another method in the same class**:
+   ```java
+   class Example {
+       void show() {
+           System.out.println("Show method called");
+       }
+
+       void display() {
+           this.show(); // Calls the 'show' method using 'this'
+       }
+   }
+   ```
+
+3. **Calling another constructor** (constructor chaining):
+   ```java
+   class Example {
+       int value;
+
+       Example() {
+           this(10); // Calls the parameterized constructor
+       }
+
+       Example(int value) {
+           this.value = value;
+           System.out.println("Value: " + value);
+       }
+   }
+   ```

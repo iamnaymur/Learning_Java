@@ -7,7 +7,7 @@ public class Person {
     int age;
 
     Person(String name, String gender, boolean isMarried, int age) {
-        this(name, age); //* calling the constructor will the name and age parameters using these keywords, so that I don't have to put those parameters again here.
+        this(name, age); //* calling the constructor with the name and age parameters using these keywords, so that I don't have to put those parameters again here.
         this.isMarried = isMarried;
         this.gender = gender;
     }
