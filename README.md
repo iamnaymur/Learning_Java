@@ -102,7 +102,7 @@ public class Main {
 }
 ```
 
-![img_1.png](img_1.png)
+![img.png](img.png)
 
 ### 2. **Inheritance**
 
@@ -111,9 +111,15 @@ child class, and the class being inherited from is the parent class.
 
 There are **4 types of inheritance**.
 
-1. Single inheritance
-2. Multilevel inheritance
-3. Hierarchical inheritance
+1. **Single inheritance**: A class inherits from only one parent class. For example, if class `B` inherits from
+   class `A`, it is called single inheritance.
+
+2. **Multilevel inheritance**: A class inherits from a parent class, and then another class inherits from that child
+   class. For example, if class `C` inherits from class `B`, and class `B` inherits from class `A`, this is multilevel
+   inheritance.
+
+3. **Hierarchical inheritance**: Multiple classes inherit from the same parent class. For example, if both class `B` and
+   class `C` inherit from class `A`, it is hierarchical inheritance.
 
 **Example:**
 
@@ -143,7 +149,8 @@ public class Main {
 ### 3. **Polymorphism**
 
 Polymorphism means "many forms." In Java, it allows methods to have different implementations depending on the object
-type or how they're called. There are two types: **_method overloading_** (same method name, different parameters) and **_method
+type or how they're called. There are two types: **_method overloading_** (same method name, different parameters) and *
+*_method
 overriding_** (child class redefines a method from the parent class).
 
 **Example of Method Overloading:**
@@ -227,3 +234,66 @@ public class Main {
     }
 }
 ```
+
+## SUPER (Keyword)
+
+In Java, the **`super`** keyword is used to refer to the parent (superclass) of an object. It is primarily used in two
+situations:
+
+1. **Calling the parent class constructor**: You can use `super()` to call the constructor of the parent class from the
+   subclass constructor, ensuring that the parent class is initialized before the child class.
+
+2. **Accessing parent class methods or variables**: If the subclass overrides a method or variable from the parent
+   class, `super.methodName()` or `super.variable` allows you to access the parent class version instead of the subclass
+   version.
+
+**Example**: super variable, super method, super constructor.
+
+```java
+class Parent {
+    String name;
+
+    // Parent class constructor
+    Parent(String name) {
+        this.name = name;
+        System.out.println("Parent constructor called. Name: " + name);
+    }
+
+    // Parent class method
+    void display() {
+        System.out.println("Parent method called. Name: " + name);
+    }
+}
+
+class Child extends Parent {
+    String name;  // Child class has its own 'name' variable
+
+    // Child class constructor
+    Child(String childName, String parentName) {
+        super(parentName);  // Calls the Parent class constructor
+        this.name = childName;
+        System.out.println("Child constructor called. Child Name: " + childName);
+    }
+
+    // Overriding Parent's method
+    @Override
+    void display() {
+        super.display();  // Calls Parent class method
+        System.out.println("Parent Name using super: " + super.name);  // Accesses Parent's name variable
+        System.out.println("Child method called. Child Name: " + name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an instance of Child class
+        Child child = new Child("Naymur Jr.", "Naymur Sr.");
+
+        // Calling the display method
+        child.display();
+    }
+}
+
+```
+
+## THIS (Keyword)
