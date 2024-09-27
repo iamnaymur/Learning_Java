@@ -235,7 +235,7 @@ public class Main {
 }
 ```
 
-## SUPER (Keyword)
+## `super` (Keyword)
 
 In Java, the **`super`** keyword is used to refer to the parent (superclass) of an object. It is primarily used in two
 situations:
@@ -296,7 +296,7 @@ public class Main {
 
 ```
 
-## THIS (Keyword)
+## `this` (Keyword)
 
 1. **Refer to instance variables**
 2. **Call other methods**
@@ -348,7 +348,7 @@ public class Main {
    }
    ```
 
-## STATIC (Keyword)
+## `static` (Keyword)
 
 1. **Static Variable:** Shared by all instances of the class.
    Can be accessed using the class name.
@@ -358,19 +358,76 @@ public class Main {
    static methods.
 3. **Static Block:** A block of code that runs when the class is loaded.
    Used for initializing static variables.
+   Here’s the updated version with code examples added:
 
-## FINAL (Keyword)
+---
 
-When the `final` keyword is used, it means the variable, method, or class is in its final state and
-cannot be changed or modified afterward. Here’s a summary:
+## `final` Keyword
+
+The `final` keyword ensures that variables, methods, or classes cannot be modified after their initial state:
 
 1. **Final Variable**: Once assigned, its value cannot change.
-    - Final variable
-    - Blank final variable (_Can be initialized with the constructor_)
-    - Static final variable
-    - Static blank final variable (_Can be initialized with the static block_)
-2. **Final Method**: It cannot be overridden by subclasses.
-3. **Final Class**: It cannot be subclassed and prevents inheritance.
+    - Example:
+      ```java
+      final int x = 10;
+      // x = 20; // Error: Cannot assign a new value to a final variable.
+      ```
+    - **Blank final variable** (initialized via constructor):
+      ```java
+      class MyClass {
+          final int y;
+ 
+          MyClass(int y) {
+              this.y = y; // Must be initialized in constructor.
+          }
+      }
+      ```
+    - **Static final variable**:
+      ```java
+      static final int z = 100;
+      ```
+    - **Static blank final variable** (initialized in static block):
+      ```java
+      class MyClass {
+          static final int z;
+          static {
+              z = 100; // Initialized in static block.
+          }
+      }
+      ```
 
-Using final keyword makes it not to override, but it gets inherited. When a final variable is created inside a method/constructor/block, it is called **local final variable** , and it must initialize once where it is created. 
+2. **Final Method**: Cannot be overridden by subclasses, but can still be inherited.
+    - Example:
+      ```java
+      class Parent {
+          public final void show() {
+              System.out.println("This is a final method.");
+          }
+      }
+ 
+      class Child extends Parent {
+          // Cannot override the show() method, but can inherit it.
+      }
+      ```
+
+3. **Final Class**: Prevents inheritance; cannot be subclassed.
+    - Example:
+      ```java
+      final class FinalClass {
+          // This class cannot be extended.
+      }
+ 
+      // class SubClass extends FinalClass {} // Error: Cannot subclass final class.
+      ```
+
+A **local final variable** (inside methods/constructors) must be initialized only once at its declaration:
+
+   ```java
+   public void example() {
+    final int localVar = 50;
+    // localVar = 60; // Error: Cannot change the value of a final local variable.
+}
+   ```
+
+
 
