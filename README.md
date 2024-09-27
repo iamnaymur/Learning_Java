@@ -347,3 +347,24 @@ public class Main {
        }
    }
    ```
+
+## STATIC (Keyword)
+
+1. **Static Variable:** Shared by all instances of the class.
+   Can be accessed using the class name.
+   Can change its value unless it's declared as final.
+
+2. **Static Method:** Can be called without creating an instance of class.Can access static variables and call other
+   static methods.
+3. **Static Block:** A block of code that runs when the class is loaded.
+   Used for initializing static variables.
+
+## FINAL (Keyword)
+
+When the `final` keyword is used, it means the variable, method, or class is in its final state and
+cannot be changed or modified afterward. Here’s a summary:
+
+1. **Final Variable**: Once assigned, its value cannot change.
+2. **Final Method**: It cannot be overridden by subclasses.
+3. **Final Class**: It cannot be subclassed.
+
