@@ -365,6 +365,12 @@ When the `final` keyword is used, it means the variable, method, or class is in 
 cannot be changed or modified afterward. Here’s a summary:
 
 1. **Final Variable**: Once assigned, its value cannot change.
+    - Final variable
+    - Blank final variable (_Can be initialized with the constructor_)
+    - Static final variable
+    - Static blank final variable (_Can be initialized with the static block_)
 2. **Final Method**: It cannot be overridden by subclasses.
-3. **Final Class**: It cannot be subclassed.
+3. **Final Class**: It cannot be subclassed and prevents inheritance.
+
+Using final keyword makes it not to override, but it gets inherited. When a final variable is created inside a method/constructor/block, it is called **local final variable** , and it must initialize once where it is created. 
 

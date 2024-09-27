@@ -1,14 +1,14 @@
 package oop.final_keyword;
 
 public class University {
-    final String name = "SUB"; //This cant be change after because I used final keyword
+    final String name = "SUB"; //* This cant be change after because I used final keyword
 
-    final String dep_name; // Black final variable, and to initialize this we need a constructor.
+    final String dep_name; //* Blank final variable, and to initialize this we need a constructor.
 
-    static final String department;
+    static final String department; //* Static blank final variable
 
     static {
-        department = "Pharmarcy"; //Have to use this static block to initialize the static blank final variable.
+        department = "Pharmarcy"; //* Have to use this static block to initialize the static blank final variable.
     }
 
     University() {
@@ -22,4 +22,7 @@ public class University {
         System.out.println(fees);
     }
 
+    void showDetails() {
+        System.out.println("University Details");
+    }
 }
