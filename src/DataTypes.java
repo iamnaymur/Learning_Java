@@ -2,6 +2,7 @@ public class DataTypes {
     public static void main(String[] args) {
         boolean b = true;
         byte smallNumber = -120;
+        String name = "Naymur Rahman";
 
         System.out.println("The value of variable b :" + b);
         System.out.println("The value of variable smallNumber :" + smallNumber);

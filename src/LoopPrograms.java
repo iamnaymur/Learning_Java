@@ -17,7 +17,7 @@ public class LoopPrograms {
         System.out.print("Enter the starting number :");
         start = input.nextInt();
         System.out.print("Enter the end number :");
-        last = input.nextInt();
+        last = input.nextInt(); 
 
 
         for (int i = start; i <= last; i++) {
